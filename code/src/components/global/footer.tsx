@@ -1,0 +1,37 @@
+import Link from "next/link"
+import { Logo } from "./logo"
+
+export const Footer:React.FC = () =>
+{
+  return (
+    <div className="flex flex-col w-screen bg-gray-800 justify-center items-center border-t-4 border-emerald-900 py-2 h-auto">
+      <div className="text-center ">
+        <Link href={"#top"} className="italic text-lg">Go To Top</Link>
+      </div>
+      <div className="">
+        <p>&copy; 2025 Dogscode.app . Distributed under the terms of the <a className="italic underline"href="https://www.gnu.org/licenses/gpl-3.0.en.html" target="_blank" rel="noopener noreferrer">GNU General Public License v3.0</a>.</p>
+      </div>
+      <div className="pt-6">
+        <h1 className="capitalize text-lg font-bold text-center">site map</h1>
+        <div className="py-2.5">
+          <ul className="flex gap-5">
+            <li>
+              <Link className=" text-sm italic capitalize font-bold transition-all hover:tracking-widest hover:text-lg hover:font-extrabold"href="/">Projects</Link>
+            </li>
+            <li>
+              <Link className=" text-sm italic capitalize font-bold transition-all hover:tracking-widest hover:text-lg hover:font-extrabold"href="/">Resources</Link>
+            </li>
+            <li>
+              <Link className=" text-sm italic capitalize font-bold transition-all hover:tracking-widest hover:text-lg hover:font-extrabold"href="/">Contact</Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className=" py-6">
+        <Logo style="FOOTER"/>
+      </div>
+      
+
+    </div>
+  )
+}
