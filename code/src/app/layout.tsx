@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Dogscode.app",
-  description: "Portfolio of @DaMeowdy on github",
+  description: "",
 };
 
 export default function RootLayout({
