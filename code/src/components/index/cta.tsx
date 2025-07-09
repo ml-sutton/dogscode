@@ -11,7 +11,7 @@ export const CTA:React.FC = () =>
         Be part of building trans futures.
       </h2>
       <p className="mt-4 text-lg leading-8 text-indigo-100">
-        Whether you're a developer, advocate, or ally; your support helps us make tools like Haj and SafePharma real. Join us in shaping tech that protects and empowers.
+        Whether you&apos;re a developer, advocate, or ally; your support helps us make tools like Haj and SafePharma real. Join us in shaping tech that protects and empowers.
       </p>
     </div>
     <div className="mt-8 lg:mt-0 lg:flex-shrink-0">

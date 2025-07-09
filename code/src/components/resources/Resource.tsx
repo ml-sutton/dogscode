@@ -1,4 +1,4 @@
-import { Resource, ResourceType } from "@/models/resource"
+import { Resource } from "@/models/resource"
 import Link from "next/link"
 import { ResourceTypeComponent } from "./ResourceType"
 
