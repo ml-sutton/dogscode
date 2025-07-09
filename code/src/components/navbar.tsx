@@ -23,7 +23,7 @@ export const Navbar:React.FC = () => {
                             <Link href="/projects">PROJECTS</Link>
                         </li>
                         <li>
-                            <Link href="/resume ">RESUME</Link>
+                            <Link href="/resources">RESOURCES</Link>
                         </li>
                         <li>
                             <Link href="/contact">CONTACT</Link>
