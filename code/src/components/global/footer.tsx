@@ -16,13 +16,16 @@ export const Footer:React.FC = () =>
         <div className="py-2.5">
           <ul className="flex gap-5">
             <li>
-              <Link className=" text-sm italic capitalize font-bold transition-all hover:tracking-widest hover:text-lg hover:font-extrabold"href="/">Projects</Link>
+              <Link className=" text-sm italic capitalize font-bold transition-all hover:tracking-widest hover:text-lg hover:font-extrabold"href="/">Our Projects</Link>
             </li>
             <li>
-              <Link className=" text-sm italic capitalize font-bold transition-all hover:tracking-widest hover:text-lg hover:font-extrabold"href="/">Resources</Link>
+              <Link className=" text-sm italic capitalize font-bold transition-all hover:tracking-widest hover:text-lg hover:font-extrabold"href="/">Resources & Support</Link>
             </li>
             <li>
-              <Link className=" text-sm italic capitalize font-bold transition-all hover:tracking-widest hover:text-lg hover:font-extrabold"href="/">Contact</Link>
+              <Link className=" text-sm italic capitalize font-bold transition-all hover:tracking-widest hover:text-lg hover:font-extrabold"href="/">Get Involved</Link>
+            </li>
+            <li>
+              <Link className=" text-sm italic capitalize font-bold transition-all hover:tracking-widest hover:text-lg hover:font-extrabold"href="/">Contact Us</Link>
             </li>
           </ul>
         </div>
