@@ -38,7 +38,7 @@ export const ResourcesComponent: React.FC = () =>
   const [searchFilter,setSearchFilter] = useState<string|undefined>();
   const [tagFilter,setTagFilter] = useState<ResourceType>(ResourceType.Any);
   const filteredByQueryResources = FilterResourcesBySearchQuery(resources,searchFilter)
-  console.log(FilterResourcesBySearchQuery);
+  console.log(filteredByQueryResources);
   const resourcelines = FilterResourcesByTag(resources,tagFilter).map((item, key) => <ResourceComponent resource_={item} key={key}/>)
   return (
     <>
