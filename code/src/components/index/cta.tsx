@@ -16,7 +16,7 @@ export const CTA:React.FC = () =>
     </div>
     <div className="mt-8 lg:mt-0 lg:flex-shrink-0">
       <Link
-        href="#get-involved"
+        href="/get-involved"
         className="inline-block rounded-md bg-white px-6 py-3 text-base font-semibold text-indigo-600 shadow-sm ring-1 ring-inset ring-white/20 hover:bg-indigo-100 transition"
       >
         Get Involved

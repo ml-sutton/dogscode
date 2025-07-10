@@ -10,7 +10,7 @@ export const ResourceComponent:React.FC<ResourceComponentProps> = (props) =>
 {
 
   return (
-<div className="rounded-2xl bg-white p-6 shadow-md ring-1 ring-gray-200 transition hover:shadow-lg">
+<div className="rounded-2xl bg-white p-6 shadow-md ring-1 ring-gray-200 transition hover:shadow-lg mb-2 mx-4">
   <div className="flex justify-between">
     <h1 className="text-xl font-semibold text-gray-900">{props.resource_.name}</h1>
     <div className="mt-1">

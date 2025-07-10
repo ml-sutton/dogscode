@@ -21,8 +21,8 @@ export const Navbar:React.FC = () => {
                 </div>
 
                 <div className="block lg:hidden ">
+                  <input type="checkbox" id="hamburger-toggle" className="peer hidden" />
                   <div className="flex justify-center items-center p-8">
-                    <input type="checkbox" id="hamburger-toggle" className="peer hidden" />
                     <label htmlFor="hamburger-toggle" className="flex flex-col w-8 h-6 justify-between cursor-pointer z-50 relative px-1">
                       <span className="block h-1 bg-white rounded transition-all peer-checked:rotate-45 peer-checked:translate-y-2"></span>
                       <span className="block h-1 bg-white rounded transition-all peer-checked:opacity-0"></span>
@@ -43,7 +43,7 @@ export const Navbar:React.FC = () => {
                     </ul>
                   </div>
                 </div>
-            </div>
+            </div>  
         </>
     );
 }

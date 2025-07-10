@@ -1,9 +1,11 @@
 "use client"
 import { currentResources, Resource, ResourceType } from "@/models/resource"
 import { ResourceComponent } from "./Resource";
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import { ResourceFilter } from "./ResourceFilter";
 import { ResourceBlurb } from "./ResourceBlurb";
+import { Paginator } from "./paginator";
+import PaginateResources from "@/utils/PaginateResources";
 
 function FilterResourcesByTag(_resources: Resource[],tag: ResourceType): Resource[]
 {
@@ -47,19 +49,24 @@ function FilterResources(_resources: Resource[],tag:ResourceType,searchQuery:str
   const filteredByTagResources = FilterResourcesByTag(filteredByQueryResources,tag);
   return filteredByTagResources;
 }
+
 export const ResourcesComponent: React.FC = () => 
 {
   const resources = currentResources;
   const [searchFilter,setSearchFilter] = useState<string|undefined>();
   const [tagFilter,setTagFilter] = useState<ResourceType>(ResourceType.Any);
-  const resourcelines = FilterResources(resources,tagFilter,searchFilter).map((item, key) => <ResourceComponent resource_={item} key={key}/>)
+  const [pageSize, setPageSize] = useState<number>(12);
+  const [pageNumber,setPageNumber] = useState<number>(1);
+  const filteredResources = FilterResources(resources,tagFilter,searchFilter)
+  const resourcelines = PaginateResources(filteredResources,pageSize,pageNumber).map((item, key) => <ResourceComponent resource_={item} key={key}/>)
   return (
     <>
-      <ResourceBlurb count={resourcelines.length}/>
-      <ResourceFilter setSearchQuery={setSearchFilter} setTag={setTagFilter} />
-      <div className="">
+      <ResourceBlurb count={resources.length}/>
+      <ResourceFilter setSearchQuery={setSearchFilter} setTag={setTagFilter} setPageSize={setPageSize} />
+      <div className="mt-2">
         {resourcelines}
       </div>
+      <Paginator selected={pageNumber} pageSize={pageSize} count={filteredResources.length} setPageNumber={setPageNumber}/>
     </>
   )
 }
