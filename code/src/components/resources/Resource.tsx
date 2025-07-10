@@ -17,11 +17,11 @@ export const ResourceComponent:React.FC<ResourceComponentProps> = (props) =>
       <ResourceTypeComponent type={props.resource_.type}/>
     </div>
   </div>
-  <div className="flex justify-between">
+  <div className="flex justify-between flex-col lg:flex-row">
     <div className="mt-4 text-gray-700 text-sm leading-6">{props.resource_.body}</div>
     <Link
       href={props.resource_.href}
-      className="mt-6 inline-block rounded-full bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 transition"
+      className="mt-6 inline-block rounded-full bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-700 transition w-fit"
     >
       Find Out More
     </Link>

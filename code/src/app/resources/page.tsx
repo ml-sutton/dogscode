@@ -1,10 +1,10 @@
-import { ResourcesComponent } from "@/components/resources/Resources";
+import { ResourceWrapper } from "@/components/resources/ResourceWrapper";
 
 export default function Resources()
 {
   return (
     <>
-      <ResourcesComponent/>
+      <ResourceWrapper/>
     </>
   )
 }

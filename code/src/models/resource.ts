@@ -30,6 +30,18 @@ export const currentResources:Resource[] = [
     href: "https://redflag.org.au/",
     type: ResourceType.Activism,
     body: "A not-for-profit left wing newspaper run by socialist alternative"
+  },
+  { 
+    name: "Trans Justice",
+    href: "https://transjustice.org.au/",
+    type: ResourceType.Activism,
+    body: "An Australian movement which stands up for freedom, justice and equality for all trans and gender-diverse people"
+  },
+  {
+    name: "DIY HRT Wiki",
+    href: "https://diyhrt.wiki/index",
+    type: ResourceType.DIY,
+    body: "Wiki full of useful information about DIY HRT."
   }
   
 ]

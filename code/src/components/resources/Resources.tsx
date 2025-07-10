@@ -3,6 +3,7 @@ import { currentResources, Resource, ResourceType } from "@/models/resource"
 import { ResourceComponent } from "./Resource";
 import { useState } from "react";
 import { ResourceFilter } from "./ResourceFilter";
+import { ResourceBlurb } from "./ResourceBlurb";
 
 function FilterResourcesByTag(_resources: Resource[],tag: ResourceType): Resource[]
 {
@@ -54,10 +55,11 @@ export const ResourcesComponent: React.FC = () =>
   const resourcelines = FilterResources(resources,tagFilter,searchFilter).map((item, key) => <ResourceComponent resource_={item} key={key}/>)
   return (
     <>
+      <ResourceBlurb count={resourcelines.length}/>
       <ResourceFilter setSearchQuery={setSearchFilter} setTag={setTagFilter} />
       <div className="">
         {resourcelines}
-    </div>
+      </div>
     </>
   )
 }

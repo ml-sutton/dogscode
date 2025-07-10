@@ -32,7 +32,7 @@ export const ResourceFilter: React.FC<ResourceFilterProps> = ({setTag,setSearchQ
         <input name="SearchQuery" type="text" className="bg-gray-400 border-b-1" onChange={(e)=>setSearchQuery(e.target.value)}/>
       </div>
       <select name="" id="" onChange={(e)=>setTag(handleSelectElement(e))}>
-        <option selected value="">All</option>
+        <option value="">All</option>
         <option value="T">Trans health</option>
         <option value="D">DIY</option>
         <option value="A">Activism</option>
