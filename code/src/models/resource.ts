@@ -7,6 +7,7 @@ export interface Resource
 }
 export enum ResourceType
 {
+  Any,
   TransHealth,
   Activism,
   DIY
