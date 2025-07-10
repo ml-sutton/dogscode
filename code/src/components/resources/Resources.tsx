@@ -27,13 +27,13 @@ function FilterResourcesByTag(_resources: Resource[],tag: ResourceType): Resourc
   return filteredResources
 }
 
-
+// function FilterResourcesBySearchQuery(_resources:Resource[])/
 export const ResourcesComponent: React.FC = () => 
 {
-  const [resources,setResources] = useState<Resource[]>(currentResources);
+  const resources = currentResources;
   const [searchFilter,setSearchFilter] = useState<string|undefined>();
   const [tagFilter,setTagFilter] = useState<ResourceType>(ResourceType.Any);
-  
+  searchFilter;
   const resourcelines = FilterResourcesByTag(resources,tagFilter).map((item, key) => <ResourceComponent resource_={item} key={key}/>)
   return (
     <>

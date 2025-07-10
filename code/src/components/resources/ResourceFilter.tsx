@@ -9,7 +9,7 @@ interface ResourceFilterProps
 
 function handleSelectElement(e:ChangeEvent<HTMLSelectElement>)
 {
-  let value = e.target.value;
+  const value = e.target.value;
   switch(value)
   {
     case "T":
