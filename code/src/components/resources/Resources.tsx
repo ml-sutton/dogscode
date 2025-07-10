@@ -1,5 +1,5 @@
 "use client"
-import { currentResources, Resource, ResourceType } from "@/models/resource"
+import { currentResources, ResourceType } from "@/models/resource"
 import { ResourceComponent } from "./Resource";
 import { useState } from "react";
 import { ResourceFilter } from "./ResourceFilter";
