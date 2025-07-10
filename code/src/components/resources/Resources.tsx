@@ -29,6 +29,7 @@ function FilterResourcesByTag(_resources: Resource[],tag: ResourceType): Resourc
 
 function FilterResourcesBySearchQuery(_resources:Resource[],searchQuery:string|undefined): Resource[]
 {
+  console.log(searchQuery)
   return _resources;
 }
 export const ResourcesComponent: React.FC = () => 
@@ -37,6 +38,7 @@ export const ResourcesComponent: React.FC = () =>
   const [searchFilter,setSearchFilter] = useState<string|undefined>();
   const [tagFilter,setTagFilter] = useState<ResourceType>(ResourceType.Any);
   const filteredByQueryResources = FilterResourcesBySearchQuery(resources,searchFilter)
+  console.log(FilterResourcesBySearchQuery);
   const resourcelines = FilterResourcesByTag(resources,tagFilter).map((item, key) => <ResourceComponent resource_={item} key={key}/>)
   return (
     <>
