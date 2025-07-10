@@ -29,17 +29,29 @@ function FilterResourcesByTag(_resources: Resource[],tag: ResourceType): Resourc
 
 function FilterResourcesBySearchQuery(_resources:Resource[],searchQuery:string|undefined): Resource[]
 {
-  console.log(searchQuery)
-  return _resources;
+  if(searchQuery==undefined||searchQuery=="")
+  {
+    return _resources;
+  }
+  const filteredResources = _resources.filter((resource)=> {
+    const titleContains = resource.name.toLowerCase().includes(searchQuery.toLowerCase());
+    const bodyContains = resource.body.toLowerCase().includes(searchQuery.toLowerCase());
+    return titleContains||bodyContains;
+  })
+  return filteredResources;
+}
+function FilterResources(_resources: Resource[],tag:ResourceType,searchQuery:string|undefined): Resource[]
+{
+  const filteredByQueryResources = FilterResourcesBySearchQuery(_resources,searchQuery);
+  const filteredByTagResources = FilterResourcesByTag(filteredByQueryResources,tag);
+  return filteredByTagResources;
 }
 export const ResourcesComponent: React.FC = () => 
 {
   const resources = currentResources;
   const [searchFilter,setSearchFilter] = useState<string|undefined>();
   const [tagFilter,setTagFilter] = useState<ResourceType>(ResourceType.Any);
-  const filteredByQueryResources = FilterResourcesBySearchQuery(resources,searchFilter)
-  console.log(filteredByQueryResources);
-  const resourcelines = FilterResourcesByTag(resources,tagFilter).map((item, key) => <ResourceComponent resource_={item} key={key}/>)
+  const resourcelines = FilterResources(resources,tagFilter,searchFilter).map((item, key) => <ResourceComponent resource_={item} key={key}/>)
   return (
     <>
       <ResourceFilter setSearchQuery={setSearchFilter} setTag={setTagFilter} />

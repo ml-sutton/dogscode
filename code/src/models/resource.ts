@@ -25,5 +25,11 @@ export const currentResources:Resource[] = [
     type: ResourceType.DIY,
     body: "A program that simulates how injected estrogen works within the body"
   },
+  {
+    name: "Redflag",
+    href: "https://redflag.org.au/",
+    type: ResourceType.Activism,
+    body: "A not-for-profit left wing newspaper run by socialist alternative"
+  }
   
 ]
