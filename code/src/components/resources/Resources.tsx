@@ -1,7 +1,7 @@
 "use client"
 import { currentResources, Resource, ResourceType } from "@/models/resource"
 import { ResourceComponent } from "./Resource";
-import { SetStateAction, useState } from "react";
+import { useState } from "react";
 import { ResourceFilter } from "./ResourceFilter";
 import { ResourceBlurb } from "./ResourceBlurb";
 import { Paginator } from "./paginator";
