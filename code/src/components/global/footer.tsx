@@ -23,6 +23,9 @@ export const Footer:React.FC = () =>
               <Link className=" text-sm italic capitalize font-bold lg:transition-all lg:hover:tracking-widest lg:hover:text-lg lg:hover:font-extrabold"href="/resources">Resources & Support</Link>
             </li>
             <li>
+              <Link className=" text-sm italic capitalize font-bold lg:transition-all lg:hover:tracking-widest lg:hover:text-lg lg:hover:font-extrabold"href="/news">News</Link>
+            </li>
+            <li>
               <Link className=" text-sm italic capitalize font-bold lg:transition-all lg:hover:tracking-widest lg:hover:text-lg lg:hover:font-extrabold"href="/get-involved">Get Involved</Link>
             </li>
             <li>

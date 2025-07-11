@@ -42,6 +42,18 @@ export const currentResources:Resource[] = [
     href: "https://diyhrt.wiki/index",
     type: ResourceType.DIY,
     body: "Wiki full of useful information about DIY HRT."
+  },
+  {
+    name: "The Gender Dysphoria Bible",
+    href: "https://genderdysphoria.fyi/en/",
+    type: ResourceType.TransHealth,
+    body: "A resource that dives into gender dysphoria and the many ways that it manifests. It also talks about what it means to be transgender."
+  },
+  {
+    name: "Equinox",
+    href: "https://equinox.org.au/",
+    type: ResourceType.TransHealth,
+    body: "Equinox is a bulk-billed gender diverse healthcare provider operating out of Thorne Harbour Health in melbourne. "
   }
   
 ]
