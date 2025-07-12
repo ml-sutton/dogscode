@@ -43,9 +43,9 @@ export const ResourceFilter: React.FC<ResourceFilterProps> = ({setTag,setSearchQ
           <option value="A">Activism</option>
         </select>
         <select name="selectNumber" onChange={(e)=>setPageSize(+e.target.value)} className="lg:mr-4 w-fit border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-600 focus:ring-1 focus:ring-indigo-400">
-          <option value="12">12</option>
-          <option value="24">24</option>
-          <option value="48">48</option>
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
         </select>
       </div>
 
